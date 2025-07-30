@@ -45,7 +45,6 @@
   </style>
 </head>
 <body>
-<!-- CONTADOR DE VISITAS CON ESTILO PERSONALIZADO -->
 <div id="contador" class="text-center mt-5">
   <span class="badge fs-5" style="background-color: #DC143C; padding: 10px 20px; border-radius: 20px; color: white; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
     👥 Visitantes: <span id="visitas">...</span>
@@ -54,13 +53,15 @@
 
 <script>
   fetch('https://api.countapi.xyz/hit/ruta38automotores/visitas')
-    .then(response => response.json())
+    .then(res => res.json())
     .then(data => {
       document.getElementById('visitas').textContent = data.value;
     })
-    .catch(() => {
+    .catch(err => {
+      console.error('Error al obtener visitas:', err);
       document.getElementById('visitas').textContent = 'error';
     });
+</script>
 </script>
 <header>
   <h1>RUTA 38 AUTOMOTORES</h1>
