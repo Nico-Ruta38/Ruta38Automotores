@@ -355,7 +355,41 @@ transform: scale(1.03);
       </div>  
     </a>  
   </div>  
+<div class="contador-autos">
+  🚘 <span id="autosVendidos">0</span> autos entregados con garantía 🔧✨
+</div>
 
+<style>
+.contador-autos {
+  font-size: 26px;
+  text-align: center;
+  margin: 50px auto 20px;
+  font-weight: bold;
+  color: #c40000;
+  text-shadow: 0 0 6px #ffcccc;
+  animation: crecer 1.5s ease-in-out;
+}
+
+@keyframes crecer {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+</style>
+
+<script>
+let contador = 0;
+const meta = 412; // Cambialo si suben las ventas
+const velocidad = 10; // Menor = más rápido
+
+const intervalo = setInterval(() => {
+  if (contador < meta) {
+    contador++;
+    document.getElementById("autosVendidos").textContent = contador;
+  } else {
+    clearInterval(intervalo);
+  }
+}, velocidad);
+</script>
 </div>
 
   </section>    <section id="contacto" class="mt-5">  
