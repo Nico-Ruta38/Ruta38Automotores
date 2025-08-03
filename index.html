@@ -391,7 +391,65 @@ const intervalo = setInterval(() => {
 }, velocidad);
 </script>
 </div>
+<div class="testimonios">
+  <div class="testimonio">
+    <img src="https://i.imgur.com/9Qe3rJf.png" alt="Cliente 1" />
+    <p>"Excelente atención, me fui en mi primer auto con GNC y garantía 👌"</p>
+    <span>— Carlos A.</span>
+  </div>
+  <div class="testimonio">
+    <img src="https://i.imgur.com/9Qe3rJf.png" alt="Cliente 2" />
+    <p>"Ruta 38 me ayudó a cambiar mi usado sin vueltas. ¡Recomiendo!"</p>
+    <span>— Fernanda M.</span>
+  </div>
+</div>
 
+<style>
+.testimonios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto;
+  max-width: 800px;
+  gap: 30px;
+}
+
+.testimonio {
+  background: #fff5f5;
+  border-left: 5px solid red;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  box-shadow: 0 0 10px #f3dcdc;
+  animation: aparecer 1s ease;
+}
+
+.testimonio img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.testimonio p {
+  font-style: italic;
+  margin: 10px 0;
+  color: #444;
+}
+
+.testimonio span {
+  display: block;
+  text-align: right;
+  font-weight: bold;
+  color: #c40000;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
   </section>    <section id="contacto" class="mt-5">  
     <h2 class="text-center mb-4">Hablanos directamente a WhatsApp</h2>  
     <form id="contactoForm" class="mx-auto" style="max-width: 600px;">  
