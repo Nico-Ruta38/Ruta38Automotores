@@ -6,6 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />  
   <title>Ruta 38 Automotores</title>  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />  
+  .logos-financiacion {
+  overflow: hidden;
+  background: white;
+  padding: 10px 0;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.logos-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: scrollLogos 20s linear infinite;
+}
+
+.logos-track img {
+  height: 30px !important;
+  max-height: 30px !important;
+  width: auto !important;
+  margin: 0 15px;
+  object-fit: contain;
+}
+
+@keyframes scrollLogos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
   <style>  
     body {  
       font-family: 'Roboto', sans-serif;  
